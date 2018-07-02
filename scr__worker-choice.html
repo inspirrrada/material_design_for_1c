@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Title</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet">
+	<link href="css/fonts.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/worker-choice.css">
+</head>
+<body>
+	<div class="heading-wrapper">
+		<div class="heading">
+			<div class="heading-block"><span>Chelner:</span> Christi A.</div>
+			<div class="heading-block heading-middle"><span>Sala:</span> PARTER</div>
+			<div class="heading-block"><span>Masa:</span> Mare 1 (10pers)</div>
+		</div>
+	</div>
+
+	<div class="wrapper">
+
+		<div class="staff">
+			<div class="staff-block">
+				<button id="button-1" data-target="modal1" class="waves-effect waves-light btn staff-btn modal-trigger" value="0111">Andrei</button>
+			</div>
+			<div class="staff-block">
+				<button id="button-2" data-target="modal1" class="waves-effect waves-light btn staff-btn modal-trigger" value="0222">Bogdan</button>
+			</div>
+			<div class="staff-block">
+				<button id="button-3" data-target="modal1" class="waves-effect waves-light btn staff-btn modal-trigger" value="0333">Bogdan P.</button>
+			</div>
+			<div class="staff-block">
+				<button id="button-4" data-target="modal1" class="waves-effect waves-light btn staff-btn modal-trigger" value="0444">Christi A.</button>
+			</div>
+			<div class="staff-block">
+				<button id="button-5" data-target="modal1" class="waves-effect waves-light btn staff-btn modal-trigger" value="0555">Christi R.</button>
+			</div>
+			<div class="staff-block">
+				<button id="button-6" data-target="modal1" class="waves-effect waves-light btn staff-btn modal-trigger" value="0666">Diana</button>
+			</div>
+			<div class="staff-block">
+				<button id="button-7" data-target="modal1" class="waves-effect waves-light btn staff-btn modal-trigger" value="0777">Florin</button>
+			</div>
+			<div class="staff-block">
+				<button id="button-8" data-target="modal1" class="waves-effect waves-light btn staff-btn modal-trigger" value="0888">Livrare</button>
+			</div>
+			<div class="staff-block">
+				<button id="button-9" data-target="modal1" class="waves-effect waves-light btn staff-btn modal-trigger" value="0999">Silvia</button>
+			</div>
+		</div>
+
+		<div id="modal1" class="modal pincode-modal">
+			<div class="modal-content">
+				<div class="pincode-title">
+					<h4>Introducenti PIN pentru <br> 					<span id="workerSelected"></span></h4>
+					<button id="pinModalClose" class="waves-effect waves-light btn number-btn-txt close-icon modal-close">
+						<i class="material-icons">close</i>
+					</button>
+				</div>
+				<div class="numbers">
+					<div class="workerPassword">
+						<input id="workerPassword" type="password">
+						<span id="wrongPin">WRONG PIN!</span>
+					</div>
+
+					<div class="number-block">
+						<button id="number-1" class="waves-effect waves-light btn number-btn" value="1">1</button>
+					</div>
+					<div class="number-block">
+						<button id="number-2" class="waves-effect waves-light btn number-btn" value="2">2</button>
+					</div>
+					<div class="number-block">
+						<button id="number-3" class="waves-effect waves-light btn number-btn" value="3">3</button>
+					</div>
+					<div class="number-block">
+						<button id="number-4" class="waves-effect waves-light btn number-btn" value="4">4</button>
+					</div>
+					<div class="number-block">
+						<button id="number-5" class="waves-effect waves-light btn number-btn" value="5">5</button>
+					</div>
+					<div class="number-block">
+						<button id="number-6" class="waves-effect waves-light btn number-btn" value="6">6</button>
+					</div>
+					<div class="number-block">
+						<button id="number-7" class="waves-effect waves-light btn number-btn" value="7">7</button>
+					</div>
+					<div class="number-block">
+						<button id="number-8" class="waves-effect waves-light btn number-btn" value="8">8</button>
+					</div>
+					<div class="number-block">
+						<button id="number-9" class="waves-effect waves-light btn number-btn" value="9">9</button>
+					</div>
+					<div class="number-block">
+						<button id="number-clear" class="waves-effect waves-light btn number-btn number-btn-txt">C</button>
+					</div>
+					<div class="number-block">
+						<button id="number-0" class="waves-effect waves-light btn number-btn" value="0">0</button>
+					</div>
+					<div class="number-block">
+						<button id="number-ok" class="waves-effect waves-light btn number-btn number-btn-txt">OK</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src=js/materialize.min.js></script>
+	<script src="js/worker-choice.js"></script>
+</body>
+</html>

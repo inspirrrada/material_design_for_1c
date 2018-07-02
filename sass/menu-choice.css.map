@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAI;EACF,gBAAgB,EAAE,MAAM",
+"sources": ["menu-choice.sass"],
+"names": [],
+"file": "menu-choice.css"
+}

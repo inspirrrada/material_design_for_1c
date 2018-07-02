@@ -1,0 +1,152 @@
+*, *:before, *:after
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  font-family: "Roboto", sans-serif
+
+a
+  text-decoration: none
+  color: black
+
+ul li
+  list-style-type: none
+
+.clearfix::after
+  content: ""
+  display: table
+  clear: both
+
+img
+  max-width: 100%
+
+body
+  background-color: #f9fbe7
+  font-family: "Roboto", sans-serif
+
+.wrapper
+  width: 90%
+  margin: auto
+  //display: flex
+  //flex-wrap: wrap
+  //flex-direction: column
+  height: 100vh
+
+header
+  diplay: flex
+  flex-direction: column
+  padding: 1% 0
+  margin-bottom: 3%
+
+.client-data-block
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+
+.client-data
+  width: 50%
+  text-align: right
+  margin-top: auto
+  margin-bottom: auto
+  margin-right: 2%
+  text-transform: uppercase
+  font-size: 1.1rem
+  font-weight: bold
+
+.data-field
+  position: relative
+  input
+    min-width: 400px
+    text-transform: uppercase
+  .close-icon
+    position: absolute
+    top: 25%
+    right: 0
+    cursor: pointer
+
+.client-code-block
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+
+.client-code
+  width: 50%
+  text-align: right
+  margin-top: auto
+  margin-bottom: auto
+  margin-right: 2%
+  text-transform: uppercase
+  font-size: 1.1rem
+  font-weight: bold
+
+.code-field
+  position: relative
+  input
+    min-width: 400px
+    text-transform: uppercase
+  .close-icon
+    position: absolute
+    top: 25%
+    right: 0
+    cursor: pointer
+
+.client-options-block
+  display: flex
+  flex-wrap: wrap
+  margin-top: 1%
+
+.client-options
+  width: 50%
+  margin-right: 2%
+  text-align: right
+
+main
+  min-height: 40vh
+  background-color: #fff
+
+
+table
+  background-color: #f9fbe7
+
+  th
+    font-weight: normal
+    text-transform: uppercase
+    text-align: center
+    background-color: #e6ee9c
+
+  td
+      background-color: #ffffff
+      text-align: center
+
+
+.footer-block
+  display: flex
+  justify-content: flex-end
+  margin-top: 5%
+  margin-bottom: 5%
+
+.footer-btn
+  margin-top: auto
+  margin-right: 10px
+  background-color: #efebe9
+  color: #000000
+  &:hover
+    background-color: #e0e0e0
+  &:focus
+    background-color: #bdbdbd
+
+
+@media (max-width: 990px)
+
+  .data-field
+    input
+      min-width: 300px
+
+  .code-field
+    input
+      min-width: 300px
+
+  .client-data
+    font-size: 1rem
+
+  main
+    font-size: 0.8125rem

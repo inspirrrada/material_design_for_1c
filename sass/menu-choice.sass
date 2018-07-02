@@ -1,0 +1,166 @@
+*, *:before, *:after
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+a
+  text-decoration: none
+  color: black
+
+ul li
+  list-style-type: none
+
+.clearfix::after
+  content: ""
+  display: table
+  clear: both
+
+img
+  max-width: 100%
+
+body
+  background-color: #f9fbe7
+  font-family: "Roboto", sans-serif
+
+.wrapper
+  width: 90%
+  margin: auto
+  display: flex
+  flex-wrap: wrap
+
+.side-menu
+  width: 20%
+  height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: space-evenly
+  button
+    padding: 0 5px
+    margin-bottom: 5px
+
+.menu-section
+  margin: 0 10px
+  min-height: 7%
+  text-transform: uppercase
+  font-weight: bold
+  background-color: #c0ca33
+  line-height: 1.5rem
+  //color: #000000
+  &:hover
+    background-color: #dce775
+  &:focus
+    background-color: #827717
+
+
+.central-block
+  width: 75%
+  display: flex
+  flex-wrap: wrap
+  margin: 0 2%
+
+.menu-dishes
+  display: flex
+  flex-wrap: wrap
+  height: 70%
+  display: none
+  justify-content: space-evenly
+  margin: 2% auto
+
+//.dishes
+//  display: flex
+//  flex-wrap: wrap
+
+
+.dish-block
+  display: flex
+  margin: 1% 5px
+  button
+    min-height: 100%
+    line-height: 1.5rem
+    background-color: #e6ee9c
+    color: #827717
+    text-transform: none
+    font-family: "Roboto", sans-serif
+    //font-weight: bold
+    &:hover
+      background-color: #dce775
+    &:focus
+      background-color: #d4e157
+      font-weight: bold
+
+.dish
+  width: 200px
+
+.footer-block
+  margin-left: auto
+  opacity: 0
+  button
+    background-color: #efebe9
+    color: #000000
+    &:hover
+      background-color: #e0e0e0
+    &:focus
+      background-color: #bdbdbd
+
+
+@media (max-width: 990px)
+  .side-menu
+    width: 25%
+
+  .central-block
+    width: 71%
+
+  .menu-section
+    line-height: 1.2rem
+    //width: 100%
+
+  .menu-dishes
+    overflow-y: auto
+
+  .dish-block
+    button
+      line-height: 1.2rem
+      padding: 0 10px
+      font-size: 0.9rem
+    .dish
+      width: 130px
+
+
+@media(max-width: 600px)
+  .side-menu
+    width: 30%
+    font-size: 0.9rem
+    height: auto
+
+  .menu-section
+    font-size: 0.9rem
+    width: 100%
+
+  .central-block
+    width: 65%
+
+  .menu-dishes
+    width: 100%
+    height: 80%
+    justify-content: flex-end
+
+  .dish-block
+    width: 80%
+    button
+      height: auto
+      min-height: 40px
+    .dish
+      width: 100%
+
+
+@media (max-width: 400px)
+  .wrapper
+    width: 95%
+
+  .menu-dishes
+    height: 90%
+
+  .footer-block
+    button
+      font-size: 0.7rem
+      padding: 0 10px

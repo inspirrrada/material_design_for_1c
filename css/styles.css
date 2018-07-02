@@ -1,0 +1,175 @@
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+ul li {
+  list-style-type: none; }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+img {
+  max-width: 100%; }
+
+body {
+  background-color: #f9fbe7; }
+
+.wrapper {
+  width: 80%;
+  margin: auto; }
+
+h3 {
+  font-size: 2.125rem;
+  font-weight: normal;
+  margin: 3% 0 1% 0;
+  text-align: center;
+  line-height: 2.5rem; }
+
+.staff {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-evenly;
+  height: 85vh; }
+
+.staff-block {
+  width: 31%;
+  margin: 0;
+  text-align: center;
+  height: 25%; }
+
+.staff-btn {
+  width: 85%;
+  text-transform: uppercase;
+  height: 100%;
+  font-size: 1.125rem;
+  font-weight: 500;
+  background-color: #f0f4c3;
+  color: #000000;
+  line-height: 20px; }
+  .staff-btn:hover {
+    background-color: #dce775; }
+  .staff-btn:focus {
+    background-color: #9e9d24;
+    color: #ffffff; }
+
+h4 {
+  font-size: 2rem;
+  line-height: 3rem; }
+
+.numbers {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 250px;
+  justify-content: center;
+  margin: 35px auto; }
+
+.number-block {
+  margin: 5px; }
+
+.number-btn {
+  font-size: 3rem;
+  font-weight: bold;
+  width: 70px;
+  height: 70px;
+  background-color: #00838f;
+  padding: 0; }
+  .number-btn:hover {
+    background-color: #006064; }
+  .number-btn:focus {
+    background-color: #00838f; }
+
+.number-btn-txt {
+  background-color: #e0f2f1;
+  color: #006064; }
+  .number-btn-txt:hover {
+    background-color: #b2dfdb; }
+  .number-btn-txt:focus {
+    background-color: #e0f2f1; }
+
+.pincode-title {
+  text-align: center; }
+
+#workerSelected {
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.close-icon {
+  padding: 0;
+  background-color: #e0f2f1;
+  color: #00838f;
+  position: absolute;
+  top: 0;
+  right: 0; }
+  .close-icon i {
+    font-weight: bold;
+    font-size: 2.5rem; }
+
+.pincode-modal {
+  max-height: 80%;
+  width: 40%; }
+
+@media (max-width: 992px) {
+  html {
+    font-size: 14px; }
+
+  .pincode-modal {
+    width: 50%; }
+
+  h4 {
+    font-size: 1.7rem; }
+
+  .number-btn {
+    font-size: 2.5rem;
+    width: 65px;
+    height: 65px; } }
+@media (max-width: 600px) {
+  h3 {
+    font-size: 1.85rem; }
+
+  .staff-block {
+    width: 50%;
+    height: 15%; }
+
+  .pincode-modal {
+    width: 70%; }
+
+  h4 {
+    font-size: 1.39rem;
+    line-height: 2.2rem; }
+
+  .numbers {
+    margin: 20px auto; }
+
+  .number-btn {
+    font-size: 2rem;
+    width: 55px;
+    height: 55px; }
+
+  .close-icon i {
+    font-size: 2rem; } }
+@media (max-width: 400px) {
+  html {
+    font-size: 12px; }
+
+  .staff-block {
+    width: 85%;
+    height: 9%; }
+
+  .numbers {
+    max-width: 180px; }
+
+  .number-btn {
+    font-size: 1.7rem;
+    width: 40px;
+    height: 40px; } }
+
+/*# sourceMappingURL=styles.css.map */

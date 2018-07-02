@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Title</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+	<link rel="stylesheet" href="css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/order-choice.css">
+</head>
+<body>
+
+	<div class="wrapper">
+		<header>
+			<div class="heading-top">
+				<div class="heading">
+					<div class="heading-block"><span>Chelner:</span> Christi A.</div>
+					<div class="heading-block heading-middle"><span>Sala:</span> PARTER</div>
+					<div class="heading-block"><span>Masa:</span> Mare 1 (10pers)</div>
+					<div class="heading-block"><span>persoane:</span> 0 </div>
+				</div>
+				<button id="closeOrderWindow" class="waves-effect waves-light btn lime lighten-4 teal-text text-darken-4">
+					<i class="material-icons">close</i>
+				</button>
+			</div>
+			<div class="heading-bottom">
+				<div class="comment-block">
+					<div class="comment-heading">
+						MASA:
+					</div>
+					<textarea id="commentField" class="materialize-textarea" placeholder="Click aici pentru explicatie" disabled></textarea>
+				</div>
+				<div class="comment-btn">
+						<button id="commentEdit" class="waves-effect waves-light btn lime lighten-4 teal-text text-darken-4">
+							<i class="material-icons">mode_edit</i>
+						</button>
+						<label for="commentField">
+						<button id="commentSave" class="waves-effect waves-light btn lime lighten-4 teal-text text-darken-4">
+							<i class="material-icons">save</i>
+						</button>
+						</label>
+					</div>
+			</div>
+		</header>
+		<main>
+			<div class="order-info">
+				<div class="order-info-main">
+					<div class="above-table">
+						<button id="notaInfo" class="waves-effect waves-light btn lime lighten-4 lime-text text-darken-4">Nota 1<br>(38,00 lei)</button>
+						<button id="add" class="waves-effect waves-light btn lime lighten-4  lime-text text-darken-4">
+							<i class="material-icons">add_circle</i>
+						</button>
+					</div>
+					<div class="info-main">
+						<div class="order-options-left">
+							<div class="btn-top">
+								<button id="addDish" class="waves-effect waves-light btn green lighten-2 teal-text text-darken-4">Adauga</button>
+								<button id="deleteDish" class="waves-effect waves-light btn red accent-2 lime-text text-lighten-4">Sterge</button>
+								<div>
+									<button id="adding" class="waves-effect waves-light btn green lighten-3 teal-text text-darken-4">
+										<i class="material-icons">exposure_plus_1</i>
+									</button>
+									<button id="deleting" class="waves-effect waves-light btn red accent-1">
+										<i class="material-icons">exposure_neg_1</i>
+									</button>
+								</div>
+								<button id="otherWorker" class="waves-effect waves-light btn  light-blue darken-2"><< Alt <br>Chelner</button>
+							</div>
+							<div class="btn-bottom">
+								<button id="deleteAll" class="waves-effect waves-light btn red accent-2">Sterge <br>tot</button>
+							</div>
+						</div>
+						<div class="table-block">
+								<table>
+									<tr>
+										<th>Articol</th>
+										<th>Cant</th>
+										<th>U M</th>
+										<th>Pret</th>
+										<th>Sum</th>
+										<th>%d</th>
+										<th>Valoare</th>
+										<th>Comandat</th>
+										<th>Coment</th>
+									</tr>
+									<tr>
+										<td>Sandwich Cubano</td>
+										<td>1,000</td>
+										<td>400 g</td>
+										<td>38,00</td>
+										<td>38,00 </td>
+										<td></td>
+										<td>38,00</td>
+										<td></td>
+										<td></td>
+									</tr>
+								</table>
+							</div>
+						<div class="order-options-right">
+							<div>
+								<button id="fel1" class="waves-effect waves-light btn deep-purple lighten-4 teal-text text-darken-4">FEL1</button>
+								<button id="fel2" class="waves-effect waves-light btn  blue lighten-4 teal-text text-darken-4">FEL2</button>
+								<button id="dessert" class="waves-effect waves-light btn light-green accent-1 teal-text text-darken-4">Dessert</button>
+							</div>
+							<button id="personQuantity" class="waves-effect waves-light btn yellow accent-1 lime-text  text-darken-4">Nr pers 0</button>
+						</div>
+					</div>
+					<div class="under-table-top">
+						<div class="under-table-btn">
+							<button id="otherNote" class="waves-effect waves-light btn lime darken-4">Muta la alta<br>nota</button>
+							<button id="otherTable" class="waves-effect waves-light btn lime darken-4">Muta la alta<br>masa</button>
+						</div>
+						<div class="under-table-summary">
+							Total: 38,00 RON
+						</div>
+					</div>
+					<div class="under-table-bottom">
+						<div class="summary-kitchen">
+							<button class="waves-effect waves-light btn teal darken-2">
+								<i class="material-icons">local_dining</i>
+								<span>Comanda <br>bucatarie <br>(1)</span>
+							</button>
+							<button class="waves-effect waves-light btn teal darken-2">
+								<i class="material-icons">local_pizza</i>
+								<span>Comanda <br>pizza <br>(0)</span>
+							</button>
+							<button class="waves-effect waves-light btn teal darken-2">
+								<i class="material-icons">local_bar</i>
+								<span>Comanda <br>bar <br>(0)</span>
+							</button>
+						</div>
+						<div class="account-block">
+							<button id="printAccount" class="waves-effect waves-light btn orange accent-2">Bon printat</button>
+							<button id="printView" class="waves-effect waves-light btn light-green darken-3">Bon <br>fiscal</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<button id="options" class="waves-effect waves-light btn">
+				<div class="left-side">
+					<i class="material-icons">settings_applications</i>Unelte
+				</div>
+				<i class="material-icons">arrow_drop_down</i></button>
+			<button id="closeAccount" class="waves-effect waves-light btn"><i class="material-icons">payment</i>Inchidere bon</button>
+			<button id="exitProgram" class="waves-effect waves-light btn"><i class="material-icons">exit_to_app</i>Iesire din program</button>
+		</footer>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src=js/materialize.min.js></script>
+	<script src="js/order-choice.js"></script>
+</body>
+</html>

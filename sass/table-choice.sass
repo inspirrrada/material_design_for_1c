@@ -1,0 +1,110 @@
+*, *:before, *:after
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  font-family: "Roboto", sans-serif
+
+a
+  text-decoration: none
+  color: black
+
+ul li
+  list-style-type: none
+
+.clearfix::after
+  content: ""
+  display: table
+  clear: both
+
+img
+  max-width: 100%
+
+body
+  background-color: #f9fbe7
+  font-family: "Roboto", sans-serif
+  height: 100vh
+
+.wrapper
+  width: 90%
+  margin: auto
+  padding: 1% 0
+
+header
+  background-color: #00838f
+
+.heading
+  width: 90%
+  margin: auto
+  display: flex
+  justify-content: space-between
+  align-items: center
+  font-size: 1.3rem
+  color: #827717
+  text-align: center
+
+.heading-left
+  display: flex
+  align-items: center
+  color: #f0f4c3
+  width: 65%
+
+.heading-block
+  //margin-right: 1%
+  padding: 10px
+  border-right-color: #006064
+  border-right-width: 2px
+  border-right-style: solid
+  font-family: 'Scope One', serif
+  font-weight: bold
+  span
+    font-weight: normal
+    font-family: 'Scope One', serif
+
+main
+  display: flex
+
+.main-left
+  display: flex
+  flex-direction: column
+  width: 15%
+  margin-right: 1%
+  button
+    margin-bottom: 5px
+
+.main-center
+  position: relative
+  width: 68%
+  //background-color: #fff
+  height: 83vh
+  overflow-y: auto
+  margin-right: 1%
+
+
+.scheme-block
+  height: 100%
+  background-image: url("../img/table-scheme_1.jpg")
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: top center
+
+.main-center
+  .btn
+    position: absolute
+    padding: 0
+    height: 6.2%
+    width: 4%
+  #table-1
+    width: 3.8%
+    right: 19.75%
+    top: 0.7%
+  #table-2
+    right: 10%
+    top: 21.7%
+  #table-3
+    width: 3.8%
+    right: 11.85%
+    top: 52.95%
+  #table-4
+    bottom: 15%
+    right: 11.45%
+

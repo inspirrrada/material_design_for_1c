@@ -221,7 +221,7 @@ var menuDish = [];
 
 
 menuSection.click(function (e) {
-
+    $(".dish-block").remove();
 
     var e = event.target.id;
     // console.log(e);
@@ -255,6 +255,9 @@ menuSection.click(function (e) {
         $(".dish-block").remove();
     }
 
+    console.log(dishBlock);
+    console.log($(".dish-block").length);
+    console.log(menuDish.length);
 
     for (var i = 0; i < menuDish.length; i++) {
        if ($(".dish-block").length < menuDish.length) {
@@ -263,7 +266,7 @@ menuSection.click(function (e) {
            a++;
        } else {
            // $(".dish-block").remove();
-           removeDishBlock ();
+           // removeDishBlock ();
        }
 
 

@@ -28,15 +28,15 @@ body
   display: flex
   flex-wrap: wrap
 
-.side-menu
-  width: 20%
+
+.side-menu-block
   height: 100vh
   display: flex
   flex-direction: column
-  justify-content: space-evenly
+  justify-content: space-around
   button
-    padding: 0 5px
     margin-bottom: 5px
+
 
 .menu-section
   margin: 0 10px
@@ -45,11 +45,14 @@ body
   font-weight: bold
   background-color: #c0ca33
   line-height: 1.5rem
-  //color: #000000
   &:hover
     background-color: #dce775
   &:focus
     background-color: #827717
+
+li
+  button
+    width: 90%
 
 
 .central-block
@@ -67,7 +70,17 @@ body
   margin: 2% auto
 
 .submenu
+  text-align: center
+  margin-top: 10%
   display: none
+  button
+    width: 75%
+    height: auto
+    padding: 10px 5px
+
+
+.showed
+  display: block
 
 
 .dish-block
@@ -76,16 +89,9 @@ body
   button
     min-height: 100%
     line-height: 1.5rem
-    //background-color: #e6ee9c
     color: #000000
     text-transform: none
     font-family: "Roboto", sans-serif
-    //font-weight: bold
-    //&:hover
-    //  background-color: #dce775
-    //&:focus
-    //  background-color: #d4e157
-      font-weight: bold
   .btn
     background-color: transparent
 
@@ -97,7 +103,9 @@ body
 
 .footer-block
   margin-left: auto
-  opacity: 0
+  margin-top: auto
+  margin-bottom: 5%
+  opacity: 1
   button
     background-color: #efebe9
     color: #000000
@@ -116,7 +124,6 @@ body
 
   .menu-section
     line-height: 1.2rem
-    //width: 100%
 
   .menu-dishes
     overflow-y: auto

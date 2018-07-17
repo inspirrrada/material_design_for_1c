@@ -28,14 +28,12 @@ body {
   display: flex;
   flex-wrap: wrap; }
 
-.side-menu {
-  width: 20%;
+.side-menu-block {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly; }
-  .side-menu button {
-    padding: 0 5px;
+  justify-content: space-around; }
+  .side-menu-block button {
     margin-bottom: 5px; }
 
 .menu-section {
@@ -49,6 +47,9 @@ body {
     background-color: #dce775; }
   .menu-section:focus {
     background-color: #827717; }
+
+li button {
+  width: 90%; }
 
 .central-block {
   width: 75%;
@@ -65,7 +66,16 @@ body {
   margin: 2% auto; }
 
 .submenu {
+  text-align: center;
+  margin-top: 10%;
   display: none; }
+  .submenu button {
+    width: 75%;
+    height: auto;
+    padding: 10px 5px; }
+
+.showed {
+  display: block; }
 
 .dish-block {
   display: flex;
@@ -87,7 +97,9 @@ body {
 
 .footer-block {
   margin-left: auto;
-  opacity: 0; }
+  margin-top: auto;
+  margin-bottom: 5%;
+  opacity: 1; }
   .footer-block button {
     background-color: #efebe9;
     color: #000000; }

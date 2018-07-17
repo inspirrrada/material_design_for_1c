@@ -1,79 +1,27 @@
+// MENU arrays
 
-/*
-$(".menu-section").click(function () {
-    var menuSectionHeading = $(this).text();
-    $(".footer-block").css("opacity", "1");
-    if ( menuSectionHeading == "Breakfast Luni" ) {
-        $(".menu-section").css("backgroundColor", "#c0ca33");
-        $(".menu-dishes").css("display", "none");
-        $("#menuBreakfast").css("display", "flex");
-        $(this).css("backgroundColor", "#827717");
-    } else if ( menuSectionHeading == "Urban" ) {
-        $(".menu-section").css("backgroundColor", "#c0ca33");
-        $(".menu-dishes").css("display", "none");
-        $("#menuUrban").css("display", "flex");
-        $(this).css("backgroundColor", "#827717");
-    } else if ( menuSectionHeading == "Starters" ) {
-        $(".menu-section").css("backgroundColor", "#c0ca33");
-        $(".menu-dishes").css("display", "none");
-        $("#menuStarters").css("display", "flex");
-        $(this).css("backgroundColor", "#827717");
-    } else if ( menuSectionHeading == "Soups" ) {
-        $(".menu-section").css("backgroundColor", "#c0ca33");
-        $(".menu-dishes").css("display", "none");
-        $("#menuSoups").css("display", "flex");
-        $(this).css("backgroundColor", "#827717");
-    } else if ( menuSectionHeading == "Main Course" ) {
-        $(".menu-section").css("backgroundColor", "#c0ca33");
-        $(".menu-dishes").css("display", "none");
-        $("#menuMainCourse").css("display", "flex");
-        $(this).css("backgroundColor", "#827717");
-    } else if ( menuSectionHeading == "Salads" ) {
-        $(".menu-section").css("backgroundColor", "#c0ca33");
-        $(".menu-dishes").css("display", "none");
-        $("#menuSalads").css("display", "flex");
-        $(this).css("backgroundColor", "#827717");
-    } else if ( menuSectionHeading == "Sides" ) {
-        $(".menu-section").css("backgroundColor", "#c0ca33");
-        $(".menu-dishes").css("display", "none");
-        $("#menuSides").css("display", "flex");
-        $(this).css("backgroundColor", "#827717");
-    } else if ( menuSectionHeading == "Pizza" ) {
-        $(".menu-section").css("backgroundColor", "#c0ca33");
-        $(".menu-dishes").css("display", "none");
-        $("#menuPizza").css("display", "flex");
-        $(this).css("backgroundColor", "#827717");
-    } else if ( menuSectionHeading == "Pizza Gigant" ) {
-        $(".menu-section").css("backgroundColor", "#c0ca33");
-        $(".menu-dishes").css("display", "none");
-        $("#menuPizzaGigant").css("display", "flex");
-        $(this).css("backgroundColor", "#827717");
-    } else if ( menuSectionHeading == "Dessert" ) {
-        $(".menu-section").css("backgroundColor", "#c0ca33");
-        $(".menu-dishes").css("display", "none");
-        $("#menuDessert").css("display", "flex");
-        $(this).css("backgroundColor", "#827717");
-    } else if ( menuSectionHeading == "Wines" ) {
-        $(".menu-section").css("backgroundColor", "#c0ca33");
-        $(".menu-dishes").css("display", "none");
-        $("#menuWines").css("display", "flex");
-        $(this).css("backgroundColor", "#827717");
-    } else if ( menuSectionHeading == "Drinks" ) {
-        $(".menu-section").css("backgroundColor", "#c0ca33");
-        $(".menu-dishes").css("display", "none");
-        $("#menuDrinks").css("display", "flex");
-        $(this).css("backgroundColor", "#827717");
-    }
-});
-*/
-
-var menuBreakfast = [
+var menuBreakfast_1 = [
     "Breakfast-9",
     "Breakfast-8",
     "Breakfast-7",
     "Breakfast-6",
     "Breakfast-5",
     "Breakfast-4",
+    "Breakfast-3",
+    "Breakfast-2",
+    "Breakfast-1"
+];
+
+var menuBreakfast_2 = [
+    "Breakfast-6",
+    "Breakfast-5",
+    "Breakfast-4",
+    "Breakfast-3",
+    "Breakfast-2",
+    "Breakfast-1"
+];
+
+var menuBreakfast_3 = [
     "Breakfast-3",
     "Breakfast-2",
     "Breakfast-1"
@@ -118,16 +66,20 @@ var menuSoups = [
     "Soups-1"
 ];
 
-var menuMainCourse = [
-    "MainCourse-12",
-    "MainCourse-11",
-    "MainCourse-10",
-    "MainCourse-9",
-    "MainCourse-8",
-    "MainCourse-7",
-    "MainCourse-6",
+var menuMainCourse_1 = [
     "MainCourse-5",
     "MainCourse-4",
+    "MainCourse-3",
+    "MainCourse-2",
+    "MainCourse-1"
+];
+
+var menuMainCourse_2 = [
+    "MainCourse-2",
+    "MainCourse-1"
+];
+
+var menuMainCourse_3 = [
     "MainCourse-3",
     "MainCourse-2",
     "MainCourse-1"
@@ -199,65 +151,112 @@ var menuDrinks = [
 ];
 
 
-//
-// var menu = [
-//     menuBreakfast,
-//     menuWines,
-//     menuDessert
-// ]
 
+// DISH-BLOCK FOR CLONING
 
 var dishBlock = $('<div class="dish-block"><button class="waves-effect waves-light btn dish-plus">+</button><button class="dish waves-effect waves-light btn"><div class="dish-name"></div><div class="dish-quantity"></div></button><button class="waves-effect waves-light btn dish-minus">-</button></div>');
 
 var menuSection = $(".menu-section");
-// console.log(menuSection);
-// for (var z = 0; z < menuSection.length; z++) {
-//     menuSection[z];
-//     console.log(menuSection[z]);
-// }
-
 var a = 0;
 var menuDish = [];
-
 
 menuSection.click(function (e) {
     $(".dish-block").remove();
 
+    if ( $(this).parent("li").children(".submenu") ) {
+
+        $(this).toggleClass("test");
+
+            if ( $(this).hasClass("test") ) {
+                $(".menu-section").hide();
+                $(this).show();
+                $(this).parent("li").children(".submenu").show();
+                $(this).parent("li").children(".submenu").children("li").children(".menu-section").show();
+                $(this).parent("li").css("height", "100%");
+                $(this).parent("li").css("justify-content", "flex-start");
+            } else {
+                $(this).parent("li").css("height", "auto");
+                $(this).parent("li").children(".submenu").children("li").children(".menu-section").hide();
+                $(this).parent("li").children(".submenu").hide();
+                $(".menu-section").show();
+                $(".dish-block").remove();
+            }
+
+            if ( $(this).parent("li").children(".submenu").length <= 0 ) {
+                $(".menu-section").show();
+                $(this).parent("li").css("height", "auto");
+            }
+
+
+            if ( $(this).is(".submenu .menu-section") ) {
+                console.log( $(this).is(".submenu .menu-section") );
+                $(".menu-section").hide();
+                $(this).show();
+                $(this).parent("li").siblings("li").children().show();
+                $(this).parent("li").parent(".submenu").prev().show();
+            }
+    }
+
+// CHANGING DISHES FROM ARRAYS
+
     var e = event.target.id;
-    // console.log(e);
-    if (e === "menuBreakfastLuni") {
-        menuDish = menuBreakfast;
-    } else if (e === "menuUrban") {
-        menuDish = menuUrban;
-    } else if (e === "menuStarters") {
-        menuDish = menuStarters;
-    } else if (e === "menuSoups") {
-        menuDish = menuSoups;
-    } else if (e === "menuMainCourse") {
-        menuDish = menuMainCourse;
-    } else if (e === "menuSalads") {
-        menuDish = menuSalads;
-    } else if (e === "menuSides") {
-        menuDish = menuSides;
-    } else if (e === "menuPizza") {
-        menuDish = menuPizza;
-    } else if (e === "menuPizzaGigant") {
-        menuDish = menuPizzaGigant;
-    } else if (e === "menuDessert") {
-        menuDish = menuDessert;
-    } else if (e === "menuWines") {
-        menuDish = menuWines;
-    } else if (e === "menuDrinks") {
-        menuDish = menuDrinks;
-    };
+
+    switch(e) {
+        case "menuBreakfastLuni-1":
+            menuDish = menuBreakfast_1;
+            break;
+        case "menuBreakfastLuni-2":
+            menuDish = menuBreakfast_2;
+            break;
+        case "menuBreakfastLuni-3":
+            menuDish = menuBreakfast_3;
+            break;
+        case "menuUrban":
+            menuDish = menuUrban;
+            break;
+        case "menuStarters":
+            menuDish = menuStarters;
+            break;
+        case "menuSoups":
+            menuDish = menuSoups;
+            break;
+        case "menuMainCourse_1":
+            menuDish = menuMainCourse_1;
+            break;
+        case "menuMainCourse_2":
+            menuDish = menuMainCourse_2;
+            break;
+        case "menuMainCourse_3":
+            menuDish = menuMainCourse_3;
+            break;
+        case "menuSalads":
+            menuDish = menuSalads;
+            break;
+        case "menuSides":
+            menuDish = menuSides;
+            break;
+        case "menuPizza":
+            menuDish = menuPizza;
+            break;
+        case "menuPizzaGigant":
+            menuDish = menuPizzaGigant;
+            break;
+        case "menuDessert":
+            menuDish = menuDessert;
+            break;
+        case "menuWines":
+            menuDish = menuWines;
+            break;
+        case "menuDrinks":
+            menuDish = menuDrinks;
+            break;
+    }
+
 
     function removeDishBlock () {
         $(".dish-block").remove();
     }
 
-    console.log(dishBlock);
-    console.log($(".dish-block").length);
-    console.log(menuDish.length);
 
     for (var i = 0; i < menuDish.length; i++) {
        if ($(".dish-block").length < menuDish.length) {
@@ -269,13 +268,14 @@ menuSection.click(function (e) {
            // removeDishBlock ();
        }
 
-
         $(".dish-name").first().text(menuDish[i]);
        // console.log(a);
 
+
+// COLOR FUNCTIONS
+
        var currentColor = $(this).css("background-color");
        $(".dish-block").css("background-color", ColorLuminance(currentColorHex, 0.2));
-
 
 
        $(".dish").click(function() {
@@ -289,8 +289,6 @@ menuSection.click(function (e) {
                 $(".dish").css("background-color", ColorLuminance(currentColorHex, 0.2));
             };
        });
-
-
 
 
        function rgb2hex(rgb) {
@@ -327,6 +325,8 @@ menuSection.click(function (e) {
        };
    }
 
+// BUTTONS + and -
+
     var b = 0;
 
     $(".dish-plus").click(function () {
@@ -354,8 +354,6 @@ menuSection.click(function (e) {
         $(this).siblings(".dish:eq(0)").css("background-color", currentColor);
         $(this).css("background-color", currentColor);
     });
-
-
 
 });
 
